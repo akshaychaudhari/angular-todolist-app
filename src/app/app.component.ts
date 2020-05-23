@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'To Do List App';
+  username:string = 'Akshay';
+
+constructor(){
+  console.log("This is constructor");
+}
+
+
+
+
+
 }
