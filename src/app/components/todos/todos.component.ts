@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Todo } from '../../models/Todo';
+import { TodoService } from '../../services/todo.service';
 
 @Component({
   selector: 'app-todos',
@@ -7,31 +8,14 @@ import { Todo } from '../../models/Todo';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
+  todos:Todo[];
 
   @Input() todo: Todo[]
   
-  todos:Todo[];
-
-  constructor() { }
+  constructor(private ts:TodoService) { }
 
   ngOnInit(){
-    this.todos = [
-      {
-        id:1,
-        title: 'One' ,
-        completed: false
-      },
-      {
-        id:2,
-        title: 'Two' ,
-        completed: true
-      },
-      {
-        id:3,
-        title: 'Three' ,
-        completed: false
-      }
-  ]
+    this.todos = this.ts.getTodos();  
   }
 
   addItem(){
@@ -40,12 +24,4 @@ export class TodosComponent implements OnInit {
     this.todos.push({id:4, title:newItemValue,completed: false});
 
   }
-
-  deleteItem(){
-    this.todos.pop();
-    console.log("Deleting last Item");
-
-  }
-
-
 }

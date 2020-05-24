@@ -4,8 +4,9 @@
     <div class="a">
         <h1>The Todo List</h1>
         <input type="text" id="newItem" name="newItem" value="">
-        <button (click)="addItem()">Add New Item</button>
-        <button (click)="deleteItem()">Delete Last Item</button>
+        <button class="btn" (click)="addItem()">Add New Item</button>
+    </div>
+    <div>
         <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item >
     </div>
 </body>

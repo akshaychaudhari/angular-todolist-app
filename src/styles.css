@@ -23,13 +23,34 @@ body {
 
 .btn {
     display: inline-block;
-    border: thin;
-    background: aqua;
+    border-width: medium ;
+    background: #add8e6;
     color: coral;
+    font-weight: bold;
     padding: 7px 20px;
-    cursor: pointer;
+    cursor: pointer;   
 }
 
-.brn-hover {
+.btn-hover {
     background: #666;
+}
+
+.del {
+    background: red;
+    color: blanchedalmond;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    float: right;
+}
+
+.todo {
+    background: #f4f4f4;
+    padding: 10px;
+    border-bottom: 1px #ccc dotted;
+}
+
+.isComplete {
+    text-decoration: line-through;
 }
