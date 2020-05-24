@@ -1,7 +1,11 @@
-<<<<<<< HEAD
-# MyApp
+# MyAngularApp 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+
+Objective
+---------
+To maintain a todo list.
+Should be able to add, complete and delete the todo list items.
 
 ## Development server
 
@@ -25,8 +29,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-=======
-# myAngularApp
-This is the simple to do list app made using angular.
->>>>>>> ae2343bbf56f6eb35660a4d055ffd531130acbfe
+    To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README]
+    (https://github.com/angular/angular-cli/blob/master/README.md).
