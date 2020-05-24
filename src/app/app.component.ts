@@ -10,11 +10,7 @@ export class AppComponent {
   username:string = 'Akshay';
 
 constructor(){
-  console.log("This is constructor");
+  console.log("This is constructor in app.component");
 }
-
-
-
-
 
 }

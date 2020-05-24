@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+.a {
+    color: blue;
+    text-decoration: wavy;
+    text-align: center;
+}
+
+.container {
+    padding: 0 1rem;
+}
+
+.btn {
+    display: inline-block;
+    border: thin;
+    background: aqua;
+    color: coral;
+    padding: 7px 20px;
+    cursor: pointer;
+}
+
+.brn-hover {
+    background: #666;
+}

@@ -1,4 +1,12 @@
-<h1>To Dos !!!</h1>
-
-<app-todo-item *ngFor="let todo of todos" [todo]="todo">
-</app-todo-item >
+<html>
+    <head></head>
+<body>    
+    <div class="a">
+        <h1>The Todo List</h1>
+        <input type="text" id="newItem" name="newItem" value="">
+        <button (click)="addItem()">Add New Item</button>
+        <button (click)="deleteItem()">Delete Last Item</button>
+        <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item >
+    </div>
+</body>
+</html>

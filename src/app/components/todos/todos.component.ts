@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Todo } from '../../models/Todo';
 
 @Component({
@@ -8,6 +8,8 @@ import { Todo } from '../../models/Todo';
 })
 export class TodosComponent implements OnInit {
 
+  @Input() todo: Todo[]
+  
   todos:Todo[];
 
   constructor() { }
@@ -31,5 +33,19 @@ export class TodosComponent implements OnInit {
       }
   ]
   }
+
+  addItem(){
+    console.log("Adding New Item for");
+    var newItemValue = ((document.getElementById("newItem") as HTMLInputElement).value);
+    this.todos.push({id:4, title:newItemValue,completed: false});
+
+  }
+
+  deleteItem(){
+    this.todos.pop();
+    console.log("Deleting last Item");
+
+  }
+
 
 }
