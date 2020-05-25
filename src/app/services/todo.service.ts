@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 //Options for HTTP request
 const HttpOptions = {
   headers: new HttpHeaders({
-    'content/type' : 'application/json'
+    'Content-Type': 'application/json'
   })
 }
 
@@ -26,11 +26,20 @@ export class TodoService {
     return this.http.get<Todo[]>(`${this.todosUrl}${this.todosLimit}`);  
   }
 
-  //Toggle Completed
-  toggleCompleted(todo: Todo):Observable<any>{
+  // Add Todo Item
+  addTodo(todo:Todo):Observable<Todo>{
+    return this.http.post<Todo>(this.todosUrl, todo, HttpOptions);
+  }
 
+  // Delete Todo Item
+  deleteTodo(todo: Todo): Observable<Todo>{
     const url = `${this.todosUrl}/${todo.id}`;
+    return this.http.delete<Todo>(url, HttpOptions);
+  }
 
+  //Toggle Completed
+  toggleCompleted(todo: Todo):Observable<any> {
+    const url = `${this.todosUrl}/${todo.id}`;
     return this.http.put(url, todo, HttpOptions);  
   }
 }
