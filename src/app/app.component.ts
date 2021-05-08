@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'To Do List App';
-  username:string = 'Akshay';
+  username: string = 'Akshay';
 
-constructor(){
-  console.log("This is constructor in app.component");
-}
+  constructor() {
+    console.log("This is constructor in app.component");
+  }
 
 }

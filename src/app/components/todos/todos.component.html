@@ -5,8 +5,7 @@
         <!--<input type="text" id="newItem" name="newItem" value="">
         <button class="btn" (click)="addItem()">Add New Item</button>-->
     </div>
-
-    <div>
+    <div class="container">
         <app-add-todo  (addTodo)="addTodo($event)"></app-add-todo>
         <app-todo-item 
         *ngFor="let todo of todos" 
